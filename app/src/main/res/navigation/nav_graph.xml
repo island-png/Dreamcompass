@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/WelcomeFragment">
+    <fragment
+        android:id="@+id/WelcomeFragment"
+        android:name="app.fukushima.haruka.dreamcompass.welcome.WelcomeFragment"
+        android:label="fragment_blank0"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_WelcomeFragment_to_EnterFinallyGoalFragment"
+            app:destination="@+id/enterFinallyGoalFragment"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/WeeklyTodoFragment"
+        android:name="app.fukushima.haruka.dreamcompass.WeeklyToDo.WeeklyTodoFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_weekly_todo">
+        <action
+            android:id="@+id/action_WeeklyTodoFragment_to_GoalFragment"
+            app:destination="@+id/GoalFragment" />
+        <action
+            android:id="@+id/action_WeeklyTodoFragment_to_TodayTodoFragment"
+            app:destination="@+id/TodayTodoFragment" />
+        <action
+            android:id="@+id/action_WeeklyTodoFragment_to_todoDetailFragment"
+            app:destination="@+id/todoDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/GoalFragment"
+        android:name="app.fukushima.haruka.dreamcompass.Goal.GoalFragment"
+        android:label="BlankFragment2"
+        tools:layout="@layout/fragment_goal">
+        <action
+            android:id="@+id/action_GoalFragment_to_WeeklyTodoFragment"
+            app:destination="@+id/WeeklyTodoFragment" />
+        <action
+            android:id="@+id/action_GoalFragment_to_TodayTodoFragment"
+            app:destination="@+id/TodayTodoFragment" />
+        <action
+            android:id="@+id/action_GoalFragment_to_enterFinallyGoalFragment"
+            app:destination="@+id/enterFinallyGoalFragment" />
+        <action
+            android:id="@+id/action_GoalFragment_to_enterMidtermGoalFragment"
+            app:destination="@+id/enterMidtermGoalFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/TodayTodoFragment"
+        android:name="app.fukushima.haruka.dreamcompass.TodayToDo.TodayTodoFragment"
+        android:label="fragment_blank3"
+        tools:layout="@layout/fragment_today_todo">
+        <action
+            android:id="@+id/action_TodayTodoFragment_to_WeeklyTodoFragment"
+            app:destination="@+id/WeeklyTodoFragment" />
+        <action
+            android:id="@+id/action_TodayTodoFragment_to_GoalFragment"
+            app:destination="@+id/GoalFragment" />
+        <action
+            android:id="@+id/action_TodayTodoFragment_to_tomorrowTodoFragment"
+            app:destination="@+id/tomorrowTodoFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/todoDetailFragment"
+        android:name="app.fukushima.haruka.dreamcompass.Detail.TodoDetailFragment"
+        android:label="fragment_todo_detail"
+        tools:layout="@layout/fragment_todo_detail">
+        <action
+            android:id="@+id/action_toDoDetailFragment_to_WeeklyTodoFragment"
+            app:destination="@+id/WeeklyTodoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterFinallyGoalFragment"
+        android:name="app.fukushima.haruka.dreamcompass.EnterGoal.EnterFinallyGoalFragment"
+        android:label="EnterFinallyGoalFragment"
+        tools:layout="@layout/enter_finally_goal">
+        <action
+            android:id="@+id/action_enterFinallyGoalFragment_to_GoalFragment"
+            app:destination="@+id/GoalFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/enterMidtermGoalFragment"
+        android:name="app.fukushima.haruka.dreamcompass.EnterGoal.EnterMidtermGoalFragment"
+        android:label="EnterMidtermGoalFragment">
+        <action
+            android:id="@+id/action_enterMidtermGoalFragment_to_GoalFragment"
+            app:destination="@+id/GoalFragment" />
+
+    </fragment>
+<!--    <fragment-->
+<!--        android:id="@+id/todaysReviewFragmemt"-->
+<!--        android:name="app.fukushima.haruka.dreamcompass.FeedBack.TodaysReviewFragmemt"-->
+<!--        android:label="TodaysReviewFragmemt">-->
+<!--        <action-->
+<!--            android:id="@+id/action_todaysReviewFragmemt_to_tomorrowTodoFragment"-->
+<!--            app:destination="@+id/tomorrowTodoFragment" />-->
+<!--    </fragment>-->
+
+    <fragment
+        android:id="@+id/tomorrowTodoFragment"
+        android:name="app.fukushima.haruka.dreamcompass.FeedBack.TomorrowTodoFragment"
+        android:label="TomorrowTodoFragment">
+
+        <action
+            android:id="@+id/action_tomorrowTodoFragmemt_to_todayTodoFragment"
+            app:destination="@+id/TodayTodoFragment" />
+    </fragment>
+
+
+</navigation>

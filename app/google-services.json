@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "578058510193",
+    "project_id": "dreamcompass-cd265",
+    "storage_bucket": "dreamcompass-cd265.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578058510193:android:4d05a6def7bbf65bc1a0d0",
+        "android_client_info": {
+          "package_name": "app.fukushima.haruka.dreamcompass"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNIokf5xeCWMZGThdlbkcHUzPYgawEPL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

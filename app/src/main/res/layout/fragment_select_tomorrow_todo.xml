@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="20dp"
+        android:text="What are you doing today?"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="28dp"
+        android:text="weekly todo"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/neumorphCardViewWhatyourgoal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/neumorphCardViewWhatyourgoal"
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonOk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:neumorph_backgroundColor="#cccccc"
+        app:neumorph_lightSource="rightBottom"
+        app:neumorph_shadowElevation="10dp" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeRecyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+<!--        <CheckBox-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            />-->
+
+    </soup.neumorphism.NeumorphCardView>
+
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/buttonOk"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="30dp"
+        android:text="ok!"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EnterGoal.EnterFinallyGoalFragment">
+
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="0.5dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="131dp"
+        android:text="WHAT IS YOUR"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="98dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="8dp"
+        android:text="MIDTERM GOAL"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/neumorphCardViewWhatyourgoal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/neumorphCardViewWhatyourgoal"
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="300dp"
+        android:layout_height="140dp"
+        app:layout_constraintBottom_toTopOf="@id/textviewWhatdo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView7"
+        app:neumorph_backgroundColor="#cccccc"
+        app:neumorph_lightSource="rightBottom"
+        app:neumorph_shadowElevation="10dp"
+        >
+
+        <EditText
+            android:id="@+id/editwhatgoal"
+            android:hint=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </soup.neumorphism.NeumorphCardView>
+
+    <TextView
+        android:id="@+id/textviewWhatdo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What should we do for that?"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/neumorphCardViewWhatyoudo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/neumorphCardViewWhatyourgoal"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/neumorphCardViewWhatyoudo"
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="300dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonOKMid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textviewWhatdo"
+        app:layout_constraintVertical_bias="0.114"
+        app:neumorph_backgroundColor="#cccccc"
+        app:neumorph_lightSource="rightBottom"
+        app:neumorph_shadowElevation="10dp">
+
+        <EditText
+            android:id="@+id/editwhatdo"
+            android:hint=""
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            />
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/buttonOKMid"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="38dp"
+        android:text="ok!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/neumorphCardViewWhatyoudo"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

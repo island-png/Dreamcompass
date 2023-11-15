@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".HomeActivity">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="weekly todo "
+            android:textSize="38dp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@id/textDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.06" />
+
+        <!--    <com.google.android.material.textfield.TextInputLayout-->
+        <!--        android:layout_width="300dp"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginStart="30dp"-->
+        <!--        android:layout_marginEnd="30dp"-->
+        <!--        tools:layout_editor_absoluteY="224dp">-->
+
+        <!--        <com.google.android.material.textfield.TextInputEditText-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="400dp"-->
+        <!--            android:hint="hint" />-->
+        <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="26dp"
+            android:layout_height="25dp"
+            android:text=""
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+            app:layout_constraintVertical_bias="0.136" />
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/cardView"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="305dp"
+            android:layout_height="402dp"
+            app:layout_constraintBottom_toTopOf="@id/buttonNewitem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDate"
+
+            app:layout_constraintVertical_bias="0.416"
+            app:neumorph_lightSource="rightBottom"
+            app:neumorph_shadowElevation="10dp"
+            app:neumorph_shapeType="flat">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/homeRecyclerView"
+                android:layout_width="270dp"
+                android:layout_height="390dp"
+                android:layout_marginStart="10dp"
+
+                />
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/buttonNewitem"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="151dp"
+            android:layout_height="64dp"
+            android:text="+new item"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+
+            app:layout_constraintBottom_toTopOf="@id/buttonCenterContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            app:layout_constraintVertical_bias="0.809"
+            app:neumorph_shapeType="flat" />
+
+        <FrameLayout
+            android:id="@+id/buttonCenterContainer"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/buttonRight"
+            app:layout_constraintStart_toEndOf="@id/buttonLeft"
+            >
+
+            <!-- NeumorphismButton -->
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/buttonCenter"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                app:flow_horizontalBias="40" />
+
+            <!-- 画像を追加 -->
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_margin="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon"
+                android:scaleType="fitCenter" />
+        </FrameLayout>
+
+
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/buttonLeft"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="+"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonCenterContainer"
+            app:layout_constraintEnd_toStartOf="@id/buttonCenterContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/buttonCenterContainer"
+            app:layout_constraintHorizontal_bias="0.129"
+
+            app:neumorph_shapeType="basin" />
+
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/buttonRight"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="⌂"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonCenterContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonCenterContainer"
+            app:layout_constraintTop_toTopOf="@id/buttonCenterContainer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

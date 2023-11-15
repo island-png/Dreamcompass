@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/goal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Goal.GoalFragment">
+
+    <TextView
+        android:id="@+id/textViewFinally"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:text="Finally goal"
+        android:textSize="25dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/Viewfinallygoal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/textViewMidterm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Midterm goal"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@id/ViewMidtermGoal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonUpdateFinally"
+
+        />
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/ViewMidtermGoal"
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="350dp"
+        android:layout_height="63dp"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonUpdatemidterm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewMidterm"
+
+        app:layout_constraintVertical_bias="0.556"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowElevation="10dp">
+
+        <TextView
+            android:id="@+id/midtermGoal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="update your midterm goal!"
+            android:layout_marginStart="10dp"
+            android:textSize="19dp"
+            android:layout_marginTop="7dp"/>
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/Viewfinallygoal"
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonUpdateFinally"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowElevation="10dp">
+
+        <TextView
+            android:id="@+id/finallygoal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:textSize="20dp" />
+
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <FrameLayout
+        android:id="@+id/buttonCenterContainer"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonRight"
+        app:layout_constraintStart_toEndOf="@id/buttonLeft"
+        >
+
+        <!-- NeumorphismButton -->
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/buttonCenter"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            app:flow_horizontalBias="40"
+            app:neumorph_shapeType="basin"/>
+
+        <!-- 画像を追加 -->
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_margin="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon"
+            android:scaleType="fitCenter" />
+    </FrameLayout>
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/buttonLeft"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="+"
+        android:textSize="24dp"
+        android:textColor="@color/black"
+        app:layout_constraintHorizontal_bias="0.129"
+
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCenterContainer"
+        app:layout_constraintEnd_toStartOf="@id/buttonCenterContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/buttonCenterContainer"
+        />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/buttonRight"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="⌂"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCenterContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonCenterContainer"
+        app:layout_constraintTop_toTopOf="@id/buttonCenterContainer" />
+
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/buttonUpdateFinally"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="151dp"
+        android:layout_height="64dp"
+        android:text="+ update"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/textViewMidterm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Viewfinallygoal"
+
+        app:layout_constraintVertical_bias="0.285" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/buttonUpdatemidterm"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="151dp"
+        android:layout_height="64dp"
+        android:text="+ update"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/buttonCenterContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ViewMidtermGoal"
+
+        app:layout_constraintVertical_bias="0.685" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
